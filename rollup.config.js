@@ -24,7 +24,7 @@ export default [
 				sourcemap: true,
 			},
 		],
-		plugins: [peerDepsExternal(), resolve(), commonjs(), typescript({ tsconfig: './tsconfig.json' }), postcss(), terser()],
+		plugins: [peerDepsExternal(), resolve(), commonjs(), typescript({ tsconfig: './tsconfig.json', exclude: ['**/__tests__', '**/*.test.ts', '**/*.test.tsx', '**/__stories__', '**/*.stories.ts', '**/*.stories.tsx'] }), postcss(), terser()],
 	},
 	{
 		input: 'dist/esm/types/index.d.ts',
