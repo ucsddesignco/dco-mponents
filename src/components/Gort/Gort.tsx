@@ -9,6 +9,8 @@ const gortImg = 'https://ih1.redbubble.net/image.3919572071.7167/pp,504x498-pad,
 const gortVid = 'https://www.youtube.com/embed/lvwZQTB4iv4?rel=0?version=3&autoplay=1&controls=0&showinfo=0&loop=1'
 
 function Gort({ autoplay = true }: GortProps) {
+	console.log(autoplay)
+
 	const [pullUp, setPullUp] = useState<boolean>(false)
 
 	const playGort = () => {
@@ -24,7 +26,8 @@ function Gort({ autoplay = true }: GortProps) {
 
 	return (
 		<div className='dcomp-gort'>
-			<img id='dcomp-gort-img' src={gortImg} style={{ display: !pullUp ? 'block' : 'none' }} onClick={playGort} onKeyDown={keyPressHandler} role='button' alt='Gort' tabIndex={0} aria-hidden={pullUp} />
+			Click Gort.
+			<img id='dcomp-gort-img' src={gortImg} style={{ display: !pullUp ? 'block' : 'none' }} onClick={playGort} onKeyDown={keyPressHandler} role='button' alt='Gort' tabIndex={0} aria-hidden={pullUp} aria-label='Select to see something fun' />
 			{pullUp && <iframe id='dcomp-gort-iframe' src={gortVid} title='capybara ok i pull up' allow={autoplay ? 'autoplay' : ''} />}
 		</div>
 	)
