@@ -129,3 +129,4 @@ dist
 .vscode
 .prettierrc
 .npmrc
+storybook-static
