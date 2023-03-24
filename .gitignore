@@ -130,3 +130,7 @@ dist
 .prettierrc
 .npmrc
 storybook-static
+
+src/components/stories
+
+.DS_store
