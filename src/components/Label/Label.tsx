@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Label.module.scss";
+import "./Label.scss";
 
 export interface LabelProps {
   /**  Sets the size*/
@@ -23,7 +23,7 @@ const Label = ({
 
   return (
     <div
-      className={styles.Label}
+      className="Label"
       style={{
         color: foregroundColor,
         background: backgroundColor,
