@@ -1,12 +1,22 @@
-import { Meta } from "@storybook/addon-docs";
+import { Meta, Typeset } from "@storybook/addon-docs";
 
 <Meta title="Foundations/Typography" />
+
+export const SampleText =
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
 
 # Typography
 
 ## Overview
 
 Describe our typography system...
+
+<Typeset
+  fontSizes={[14, 16, 20, 24, 32, 40]}
+  fontWeight={"regular"}
+  sampleText={SampleText}
+  fontFamily={"arial"}
+/>
 
 ## Vertical Trim
 
