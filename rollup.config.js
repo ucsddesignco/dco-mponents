@@ -5,6 +5,8 @@ import postcss from 'rollup-plugin-postcss'
 import dts from 'rollup-plugin-dts'
 import terser from '@rollup/plugin-terser'
 import peerDepsExternal from 'rollup-plugin-peer-deps-external'
+import sourcemaps from 'rollup-plugin-sourcemaps'
+import sucrase from '@rollup/plugin-sucrase'
 
 const packageJson = require('./package.json')
 
@@ -24,7 +26,19 @@ export default [
 				sourcemap: true,
 			},
 		],
-		plugins: [peerDepsExternal(), resolve(), commonjs(), typescript({ tsconfig: './tsconfig.json', exclude: ['**/__tests__', '**/*.test.ts', '**/*.test.tsx', '**/__stories__', '**/*.stories.ts', '**/*.stories.tsx'] }), postcss(), terser()],
+		plugins: [
+			peerDepsExternal(),
+			resolve(),
+			sourcemaps(),
+			commonjs(),
+			typescript({ tsconfig: './tsconfig.json', exclude: ['**/__tests__', '**/*.test.ts', '**/*.test.tsx', '**/__stories__', '**/stories/*.tsx', '**/*.stories.ts', '**/*.stories.tsx'] }),
+			postcss(),
+			sucrase({
+				exclude: ['node_modules/**'],
+				transforms: ['typescript', 'jsx'],
+			}),
+			terser(),
+		],
 	},
 	{
 		input: 'dist/esm/types/index.d.ts',
