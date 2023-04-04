@@ -3,7 +3,7 @@
 	"publishConfig": {
 		"registry": "https://npm.pkg.github.com/arth-shukla"
 	},
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"description": "DCo UCSD Component Library",
 	"scripts": {
 		"rollup": "rollup -c --bundleConfigAsCjs",
@@ -54,6 +54,9 @@
 		"ts-node": "^10.9.1",
 		"tslib": "^2.5.0",
 		"typescript": "^5.0.2"
+	},
+	"peerDependencies": {
+		"react": "^18.2.0"
 	},
 	"main": "dist/cjs/index.js",
 	"module": "dist/esm/index.js",
