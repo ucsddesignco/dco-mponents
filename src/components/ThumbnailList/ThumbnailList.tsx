@@ -19,7 +19,7 @@ function ThumbnailList({ thumbnails, thumbnailsPerRow = 3, forceSquare = true, j
 			}}
 		>
 			{Object.keys(thumbnails).map(cap => (
-				<div
+				<figure
 					className='dcomp-thumbnail-list-thumbnail'
 					style={
 						{
@@ -29,13 +29,13 @@ function ThumbnailList({ thumbnails, thumbnailsPerRow = 3, forceSquare = true, j
 					}
 				>
 					<img
-						className={String(forceSquare && 'dcomp-thumbnail-list-image-square')}
+						className={'dcomp-thumbnail-list-image' + String(forceSquare && ' dcomp-thumbnail-list-image-square')}
 						src={thumbnails[cap]}
 						alt={`Some regularized description of ${cap}.`}
 						width='100%'
 					/>
-					{cap}
-				</div>
+					<figcaption className='dcomp-thumbnail-list-image-caption'>{cap}</figcaption>
+				</figure>
 			))}
 		</div>
 	)
