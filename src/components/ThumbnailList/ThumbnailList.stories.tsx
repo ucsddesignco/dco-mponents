@@ -29,6 +29,7 @@ const Template: ComponentStory<typeof ThumbnailList> = args => (
 		{...args}
 		thumbnails={TestImages}
 		thumbnailsPerRow={4}
+		imagePadding={10}
 	/>
 )
 

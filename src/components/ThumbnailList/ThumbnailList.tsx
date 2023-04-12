@@ -7,9 +7,10 @@ interface ThumbnailListProps {
 	thumbnailsPerRow?: number
 	forceSquare?: boolean
 	justifyContent?: string
+	imagePadding?: number
 }
 
-function ThumbnailList({ thumbnails, thumbnailsPerRow = 3, forceSquare = true, justifyContent = 'space-around' }: ThumbnailListProps) {
+function ThumbnailList({ thumbnails, thumbnailsPerRow = 3, forceSquare = true, justifyContent = 'space-around', imagePadding = 0 }: ThumbnailListProps) {
 	return (
 		<div
 			className='dcomp-thumbnail-list-container'
@@ -22,7 +23,8 @@ function ThumbnailList({ thumbnails, thumbnailsPerRow = 3, forceSquare = true, j
 					className='dcomp-thumbnail-list-thumbnail'
 					style={
 						{
-							'--max-thumbnail-width': `${100 / (thumbnailsPerRow + 1)}%`,
+							'--max-thumbnail-width': `calc(${Math.floor((100 / thumbnailsPerRow) * 100) / 100}%`,
+							'--image-padding': `${imagePadding}px`,
 						} as React.CSSProperties
 					}
 				>
