@@ -3,7 +3,7 @@ import { render } from '@testing-library/react'
 
 import Gort from './Gort'
 
-describe('Button', () => {
+describe('Gort', () => {
 	test('renders the Gort component', () => {
 		render(<Gort />)
 	})
