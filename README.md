@@ -12,7 +12,7 @@ Development Standards: Web Content Accessibility Guidelines (WCAG) 2.1, Aria Aut
 
 # Description and Motivation
 
-This is a component library for Design Co UCSD. It is published through GitHub Packages https://github.com/users/arth-shukla/packages/npm/package/dco-mponents.
+This is a component library for Design Co UCSD. It is published to npm: https://www.npmjs.com/package/@arth-shukla/dco-mponents.
 
 # Features
 
@@ -22,7 +22,6 @@ This is a component library for Design Co UCSD. It is published through GitHub P
     - Components usable in both Typescript and standard React projects
 3. Jest for Unit Testing
     - Scalable and allows for high code coverage
-    -
 4. Storybook for documentation and demos
     - Easy visual QAs to make sure in-line with DCo Design System
     - Documentation generated automatically

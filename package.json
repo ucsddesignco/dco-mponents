@@ -1,7 +1,8 @@
 {
 	"name": "@arth-shukla/dco-mponents",
-	"publishConfig": {
-		"registry": "https://npm.pkg.github.com/arth-shukla"
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/arth-shukla/dco-mponents"
 	},
 	"version": "1.0.11",
 	"description": "DCo UCSD Component Library",
@@ -68,7 +69,8 @@
 	"main": "dist/cjs/index.js",
 	"module": "dist/esm/index.js",
 	"files": [
-		"dist"
+		"dist",
+		"README.md"
 	],
 	"types": "dist/index.d.ts",
 	"dependencies": {
