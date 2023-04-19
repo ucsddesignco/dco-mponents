@@ -4,7 +4,7 @@
 		"type": "git",
 		"url": "https://github.com/arth-shukla/dco-mponents"
 	},
-	"version": "1.0.11",
+	"version": "1.0.0",
 	"description": "DCo UCSD Component Library",
 	"homepage": "http://arth-shukla.github.io/dco-mponents",
 	"scripts": {
