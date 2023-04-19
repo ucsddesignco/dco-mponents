@@ -6,7 +6,7 @@
 	},
 	"version": "1.0.0",
 	"description": "DCo UCSD Component Library",
-	"homepage": "http://arth-shukla.github.io/dco-mponents",
+	"homepage": "http://designco.github.io/dco-mponents",
 	"scripts": {
 		"rollup": "rollup -c --bundleConfigAsCjs",
 		"test": "jest",
