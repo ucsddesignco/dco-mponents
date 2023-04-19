@@ -65,8 +65,5 @@
 	"files": [
 		"dist"
 	],
-	"types": "dist/index.d.ts",
-	"dependencies": {
-		"react-uuid": "^2.0.0"
-	}
+	"types": "dist/index.d.ts"
 }
