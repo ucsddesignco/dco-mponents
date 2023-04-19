@@ -16,9 +16,13 @@ interface ThumbnailListProps {
 	forceSquare?: boolean
 	justifyContent?: string
 	imagePadding?: number
+	className: string
+	style: React.CSSProperties
+	[x: string]: any
+
 }
 
-function ThumbnailList({ thumbnails, thumbnailsPerRow = 4, forceSquare = true, justifyContent = 'space-around', imagePadding = 0 }: ThumbnailListProps) {
+function ThumbnailList({ thumbnails, thumbnailsPerRow = 4, forceSquare = true, justifyContent = 'space-around', imagePadding = 0, className = '', style = {},  ...rest}: ThumbnailListProps) {
 	const generateKeys = () => {
 		const thumbnailKeys: { [key:string] : string } = {}
 
@@ -47,15 +51,17 @@ function ThumbnailList({ thumbnails, thumbnailsPerRow = 4, forceSquare = true, j
 					thumbnail?.href !== undefined ? 'a' : 'figure',
 					// props
 					{
-						className: 'dcomp-thumbnail-list-thumbnail',
+						className: 'dcomp-thumbnail-list-thumbnail ' + className,
 						href: thumbnail?.href !== undefined ? thumbnail.href : undefined,
 						target: thumbnail?.href !== undefined ? '_blank' : undefined,
 						rel: thumbnail?.href !== undefined ? 'noreferrer' : undefined,
 						style: {
 							'--max-thumbnail-width': `${Math.floor((100 / thumbnailsPerRow) * 100) / 100}%`,
 							'--image-padding': `${imagePadding}px`,
+							...style,
 						},
 						key: uuidKeys[thumbnail.caption],
+						...rest,
 					},
 					// children
 					<>
