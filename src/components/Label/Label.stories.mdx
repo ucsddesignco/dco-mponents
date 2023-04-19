@@ -1,0 +1,41 @@
+import { Canvas, Source, ArgsTable, Meta, Story } from "@storybook/addon-docs";
+import Label from "./Label";
+
+<Meta
+  title="DComponents/Tag"
+  component={Label}
+  args={{
+    children: "Example Text",
+  }}
+/>
+export const Template = (args) => <Label {...args} />;
+
+# Label
+
+Describe Label component...
+
+<Canvas withSource="open">
+  <Story name="Default">{Template.bind({})}</Story>
+</Canvas>
+<ArgsTable story="Default" />
+
+## Usage
+
+Labels should be used in...
+
+- Situation X
+- Situation Y
+- Situaion Z
+
+## Sizes
+
+We have different sizes available...
+
+<Canvas>
+  <Story name="Medium" args={{ size: "medium" }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="Small" args={{ size: "small" }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
