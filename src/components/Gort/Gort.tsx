@@ -27,8 +27,26 @@ function Gort({ autoplay = true }: GortProps) {
 	return (
 		<div className='dcomp-gort'>
 			Click Gort.
-			<img id='dcomp-gort-img' src={gortImg} style={{ display: !pullUp ? 'block' : 'none' }} onClick={playGort} onKeyDown={keyPressHandler} role='button' alt='Gort' tabIndex={0} aria-hidden={pullUp} aria-label='Select to see something fun' />
-			{pullUp && <iframe id='dcomp-gort-iframe' src={gortVid} title='capybara ok i pull up' allow={autoplay ? 'autoplay' : ''} />}
+			<img
+				id='dcomp-gort-img'
+				src={gortImg}
+				style={{ display: !pullUp ? 'block' : 'none' }}
+				onClick={playGort}
+				onKeyDown={keyPressHandler}
+				role='button'
+				alt='Gort'
+				tabIndex={0}
+				aria-hidden={pullUp}
+				aria-label='Select to see something fun'
+			/>
+			{pullUp && (
+				<iframe
+					id='dcomp-gort-iframe'
+					src={gortVid}
+					title='capybara ok i pull up'
+					allow={autoplay ? 'autoplay' : ''}
+				/>
+			)}
 		</div>
 	)
 }
