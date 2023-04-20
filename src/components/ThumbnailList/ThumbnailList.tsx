@@ -14,17 +14,16 @@ interface ThumbnailListProps {
 	thumbnails: DCoThumbnail[]
 	thumbnailsPerRow?: number
 	forceSquare?: boolean
-	justifyContent?: string
+	justifyContent?: 'center' | 'left' | 'right' | 'space-between' | 'space-around' | 'space-evenly'
 	imagePadding?: number
-	className: string
-	style: React.CSSProperties
+	className?: string
+	style?: React.CSSProperties
 	[x: string]: any
-
 }
 
-function ThumbnailList({ thumbnails, thumbnailsPerRow = 4, forceSquare = true, justifyContent = 'space-around', imagePadding = 0, className = '', style = {},  ...rest}: ThumbnailListProps) {
+function ThumbnailList({ thumbnails, thumbnailsPerRow = 4, forceSquare = true, justifyContent = 'center', imagePadding = 0, className = '', style = {}, ...rest }: ThumbnailListProps) {
 	const generateKeys = () => {
-		const thumbnailKeys: { [key:string] : string } = {}
+		const thumbnailKeys: { [key: string]: string } = {}
 
 		thumbnails.forEach(thumbnail => {
 			thumbnailKeys[thumbnail.caption] = uuid()
@@ -45,7 +44,7 @@ function ThumbnailList({ thumbnails, thumbnailsPerRow = 4, forceSquare = true, j
 				justifyContent: justifyContent,
 			}}
 		>
-			{thumbnails.map(thumbnail => (
+			{thumbnails.map(thumbnail =>
 				React.createElement(
 					// element name
 					thumbnail?.href !== undefined ? 'a' : 'figure',
@@ -73,8 +72,8 @@ function ThumbnailList({ thumbnails, thumbnailsPerRow = 4, forceSquare = true, j
 						/>
 						<figcaption className='dcomp-thumbnail-list-image-caption'>{thumbnail.caption}</figcaption>
 					</>,
-				)
-			))}
+				),
+			)}
 		</div>
 	)
 }
