@@ -1,8 +1,26 @@
+@font-face {
+  font-family: NB International;
+  src: url('./fonts/NB-International-Regular.ttf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: NB International Mono;
+  src: url('./fonts/NB-International-Mono.ttf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Neue Plak Extended;
+  src: url('./fonts/NB-International-Mono.ttf');
+  font-style: bold;
+}
+
 html,
 body {
-	font-family: sans-serif;
+  font-family: sans-serif;
 }
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
