@@ -1,6 +1,6 @@
 # Link
 
-Examples and documentation are available here: https://arth-shukla.github.io/dco-mponents/
+Examples and documentation are available here: https://ucsddesignco.github.io/dco-mponents
 
 # Technologies Used
 
@@ -31,10 +31,11 @@ This is a component library for Design Co UCSD. It is published to npm: https://
     - Additional acessibility options (e.g. `aria-label`s) must be passed as props.
 6. Customizable
     - Additional props (ids, classNames, etc) can be passed into the component to override default styling.
+    - One can also alter the styling directly with CSS by modfying the class styling
 
 # Related Projects
 
-Storyboook demos and documentation are available here: https://arth-shukla.github.io/dco-mponents/.
+Storyboook demos and documentation are available here: https://ucsddesignco.github.io/dco-mponents.
 
 # About Me
 

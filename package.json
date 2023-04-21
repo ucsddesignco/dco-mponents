@@ -9,7 +9,7 @@
 	"homepage": "http://arth-shukla.github.io/dco-mponents",
 	"scripts": {
 		"rollup": "rollup -c --bundleConfigAsCjs",
-		"test": "jest",
+		"test": "jest --coverage",
 		"storybook": "storybook dev -p 6006",
 		"predeploy-storybook": "npm run build-storybook",
 		"deploy-storybook": "gh-pages -d storybook-static",

@@ -35,8 +35,6 @@ function ThumbnailList({ thumbnails, thumbnailsPerRow = 4, forceSquare = true, j
 	// eslint-disable-next-line
 	const [uuidKeys, _] = useState(generateKeys())
 
-	console.log(Math.floor((100 / thumbnailsPerRow) * 100) / 100)
-
 	return (
 		<div
 			className='dcomp-thumbnail-list-container'
