@@ -1,20 +1,45 @@
-import { Meta, Typeset } from '@storybook/addon-docs'
+import { Meta, Typeset } from '@storybook/addon-docs';
 
-<Meta title='Foundations/Typography' />
+<Meta title="Foundations/Typography" />
 
-export const SampleText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+export const SampleText =
+  'Few black taxis drive up major roads on quiet hazy nights.';
 
 # Typography
 
+- [Overview](#overview)
+- [Vertical Trim](#vertical-trim)
+- [Titles and Headings](#titles-and-headings)
+- [Body and Other Text](#body-and-other-text)
+
 ## Overview
 
-Describe our typography system...
+Design Co primarily uses two fonts. Neue Plak Extended Bold is used for titles and headings. NB International Regular is used for all other text. Occasionally, custom decorative fonts may be also used.
+
+## Titles and Headings
+
+**Font:** Neue Plak Extended
+
+**Weight:** Bold
 
 <Typeset
-	fontSizes={[14, 16, 20, 24, 32, 40]}
-	fontWeight={'regular'}
-	sampleText={SampleText}
-	fontFamily={'arial'}
+  fontSizes={[32, 48, 72, 96]}
+  fontWeight={'bold'}
+  sampleText={SampleText}
+  fontFamily={'Neue Plak Extended'}
+/>
+
+## Body and Other Text
+
+**Font:** NB International
+
+**Weight:** Regular
+
+<Typeset
+  fontSizes={[14, 16, 20, 24]}
+  fontWeight={'regular'}
+  sampleText={SampleText}
+  fontFamily={'NB International'}
 />
 
 ## Vertical Trim
