@@ -1,0 +1,19 @@
+.dc-columns {
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  gap: var(--space);
+  align-items: var(--vertical-aligntment);
+}
+
+@mixin collapse-breakpoint($name, $breakpoint) {
+  .dc-columns__breakpoint--#{$name} {
+    @media only screen and (max-width: #{$breakpoint}) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@include collapse-breakpoint('sm', 544px);
+@include collapse-breakpoint('md', 768px);
+@include collapse-breakpoint('lg', 1024px);
+@include collapse-breakpoint('xlg', 1280px);
