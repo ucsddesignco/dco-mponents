@@ -9,8 +9,6 @@ const gortImg = 'https://ih1.redbubble.net/image.3919572071.7167/pp,504x498-pad,
 const gortVid = 'https://www.youtube.com/embed/lvwZQTB4iv4?rel=0?version=3&autoplay=1&controls=0&showinfo=0&loop=1'
 
 function Gort({ autoplay = true }: GortProps) {
-	console.log(autoplay)
-
 	const [pullUp, setPullUp] = useState<boolean>(false)
 
 	const playGort = () => {
