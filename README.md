@@ -1,6 +1,6 @@
 # Link
 
-Examples and documentation are available here: https://ds.ucsddesign.co
+Examples and documentation are available here: https://dcomponents.ucsddesign.co
 
 # Technologies Used
 
