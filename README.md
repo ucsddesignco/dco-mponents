@@ -1,6 +1,6 @@
 # Link
 
-Examples and documentation are available here: https://ucsddesignco.github.io/dco-mponents
+Examples and documentation are available here: https://ds.ucsddesign.co
 
 # Technologies Used
 
@@ -18,20 +18,20 @@ This is a component library for Design Co UCSD. It is published to npm: https://
 
 1. Supports computer, mobile, and tablet web interfaces through webkit
 2. Written in Typescript
-    - Prop typing allows for easier debugging in projects
-    - Components usable in both Typescript and standard React projects
+   - Prop typing allows for easier debugging in projects
+   - Components usable in both Typescript and standard React projects
 3. Jest for Unit Testing
-    - Scalable and allows for high code coverage
+   - Scalable and allows for high code coverage
 4. Storybook for documentation and demos
-    - Easy visual QAs to make sure in-line with DCo Design System
-    - Documentation generated automatically
-    - Demos allow for examining/testing use cases
+   - Easy visual QAs to make sure in-line with DCo Design System
+   - Documentation generated automatically
+   - Demos allow for examining/testing use cases
 5. Accessible
-    - The components themselves support keyboard control and aria tags are added where appropriate.
-    - Additional acessibility options (e.g. `aria-label`s) must be passed as props.
+   - The components themselves support keyboard control and aria tags are added where appropriate.
+   - Additional acessibility options (e.g. `aria-label`s) must be passed as props.
 6. Customizable
-    - Additional props (ids, classNames, etc) can be passed into the component to override default styling.
-    - One can also alter the styling directly with CSS by modfying the class styling
+   - Additional props (ids, classNames, etc) can be passed into the component to override default styling.
+   - One can also alter the styling directly with CSS by modfying the class styling
 
 # Related Projects
 
