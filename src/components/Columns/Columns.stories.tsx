@@ -1,7 +1,7 @@
 import React from 'react';
 import type { Meta, StoryFn, StoryObj } from '@storybook/react';
 import Columns from './Columns';
-import Placeholder from '../Placeholder/Placeholder';
+import Placeholder from '../Placeholder/';
 
 const meta: Meta<typeof Columns> = {
   title: 'DComponents/Columns',

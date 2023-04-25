@@ -1,9 +1,9 @@
-import type { Preview } from "@storybook/react";
-import "../src/global.scss";
+import type { Preview } from '@storybook/react';
+import '../src/global.scss';
 
 const preview: Preview = {
   parameters: {
-    actions: { argTypesRegex: "^on[A-Z].*" },
+    actions: { argTypesRegex: '^on[A-Z].*' },
     controls: {
       matchers: {
         color: /(background|color)$/i,
@@ -12,7 +12,8 @@ const preview: Preview = {
     },
     options: {
       storySort: {
-        order: ["Welcome", "Foundations"],
+        order: ['Welcome', 'Foundations'],
+        method: 'alphabetical',
       },
     },
   },

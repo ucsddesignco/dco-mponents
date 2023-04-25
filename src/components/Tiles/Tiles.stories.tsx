@@ -1,8 +1,9 @@
 import React from 'react';
 import type { Meta, StoryFn, StoryObj } from '@storybook/react';
 import Tiles from './Tiles';
-import Placeholder from '../Placeholder/Placeholder';
+import Placeholder from '../Placeholder/';
 
+Placeholder;
 const meta: Meta<typeof Tiles> = {
   title: 'DComponents/Tiles',
   component: Tiles,

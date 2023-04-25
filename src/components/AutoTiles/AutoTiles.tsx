@@ -57,4 +57,4 @@ const AutoTiles = ({
 
 export default AutoTiles;
 
-AutoTiles.AutoTile = AutoTile;
+AutoTiles.Tile = AutoTile;

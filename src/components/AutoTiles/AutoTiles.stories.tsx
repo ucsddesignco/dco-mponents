@@ -1,7 +1,7 @@
 import React from 'react';
 import type { Meta, StoryFn, StoryObj } from '@storybook/react';
 import AutoTiles from './AutoTiles';
-import Placeholder from '../Placeholder/Placeholder';
+import Placeholder from '../Placeholder/';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta: Meta<typeof AutoTiles> = {
@@ -16,70 +16,70 @@ type Story = StoryObj<typeof meta>;
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template: StoryFn = (args) => (
   <AutoTiles minWidth={250} {...args}>
-    <AutoTiles.AutoTile>
+    <AutoTiles.Tile>
       <Placeholder />
-    </AutoTiles.AutoTile>
-    <AutoTiles.AutoTile>
+    </AutoTiles.Tile>
+    <AutoTiles.Tile>
       <Placeholder />
-    </AutoTiles.AutoTile>
-    <AutoTiles.AutoTile>
+    </AutoTiles.Tile>
+    <AutoTiles.Tile>
       <Placeholder />
-    </AutoTiles.AutoTile>
-    <AutoTiles.AutoTile>
+    </AutoTiles.Tile>
+    <AutoTiles.Tile>
       <Placeholder />
-    </AutoTiles.AutoTile>
-    <AutoTiles.AutoTile>
+    </AutoTiles.Tile>
+    <AutoTiles.Tile>
       <Placeholder />
-    </AutoTiles.AutoTile>
+    </AutoTiles.Tile>
   </AutoTiles>
 );
 
 const UnequalHeightsTemplate: StoryFn = (args) => (
   <AutoTiles minWidth={250} {...args}>
-    <AutoTiles.AutoTile>
+    <AutoTiles.Tile>
       <Placeholder height={50} />
-    </AutoTiles.AutoTile>
-    <AutoTiles.AutoTile>
+    </AutoTiles.Tile>
+    <AutoTiles.Tile>
       <Placeholder height={30} />
-    </AutoTiles.AutoTile>
-    <AutoTiles.AutoTile>
+    </AutoTiles.Tile>
+    <AutoTiles.Tile>
       <Placeholder height={70} />
-    </AutoTiles.AutoTile>
-    <AutoTiles.AutoTile>
+    </AutoTiles.Tile>
+    <AutoTiles.Tile>
       <Placeholder height={70} />
-    </AutoTiles.AutoTile>
-    <AutoTiles.AutoTile>
+    </AutoTiles.Tile>
+    <AutoTiles.Tile>
       <Placeholder height={50} />
-    </AutoTiles.AutoTile>
+    </AutoTiles.Tile>
   </AutoTiles>
 );
 
 const MinimumWidthsTemplate: StoryFn = (args) => (
   <AutoTiles minWidth={100} {...args}>
-    <AutoTiles.AutoTile>
+    <AutoTiles.Tile>
       <Placeholder />
-    </AutoTiles.AutoTile>
-    <AutoTiles.AutoTile>
+    </AutoTiles.Tile>
+    <AutoTiles.Tile>
       <Placeholder />
-    </AutoTiles.AutoTile>
-    <AutoTiles.AutoTile>
+    </AutoTiles.Tile>
+    <AutoTiles.Tile>
       <Placeholder />
-    </AutoTiles.AutoTile>
-    <AutoTiles.AutoTile>
+    </AutoTiles.Tile>
+    <AutoTiles.Tile>
       <Placeholder />
-    </AutoTiles.AutoTile>
-    <AutoTiles.AutoTile>
+    </AutoTiles.Tile>
+    <AutoTiles.Tile>
       <Placeholder />
-    </AutoTiles.AutoTile>
-    <AutoTiles.AutoTile>
+    </AutoTiles.Tile>
+    <AutoTiles.Tile>
       <Placeholder />
-    </AutoTiles.AutoTile>
-    <AutoTiles.AutoTile>
+    </AutoTiles.Tile>
+    <AutoTiles.Tile>
       <Placeholder />
-    </AutoTiles.AutoTile>
-    <AutoTiles.AutoTile>
+    </AutoTiles.Tile>
+    <AutoTiles.Tile>
       <Placeholder />
-    </AutoTiles.AutoTile>
+    </AutoTiles.Tile>
   </AutoTiles>
 );
 
