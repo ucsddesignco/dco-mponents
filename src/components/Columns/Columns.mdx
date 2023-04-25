@@ -15,6 +15,14 @@ import Columns from './Columns';
 
 # Columns
 
+- [Overview](#overview)
+- [Spacing](#spacing)
+- [Column Widths](#column-widths)
+- [Collapsing Columns](#collapsing-columns)
+- [Vertical Alignment](#vertical-alignment)
+
+## Overview
+
 <Description of={Columns} />
 
 <Canvas of={ColumnsStories.Default} sourceState="shown" />
@@ -22,7 +30,7 @@ import Columns from './Columns';
 
 ## Spacing
 
-Spacing between columns is set using the `space` prop. By default, `space` is `0`.
+Spacing between columns is set using the `space` prop.
 
 <Canvas of={ColumnsStories.WithSpace} />
 <Controls of={ColumnsStories.WithSpace} include="space" />
@@ -41,13 +49,13 @@ Column widths are set manually using the `span` prop. The total `span` amount of
 
 ## Collapsing Columns
 
-Columns can be collapsed into a single column when the viewport is below a certain width determined by the optional prop `collapseBreakpoint`. The columns below collapse when the viewport is less than or equal to 768px.
+Columns can be made responsive and collapse into a single column when the viewport is below a certain width set by the optional prop `collapseBreakpoint`. The columns below collapse when the viewport is less than or equal to 768px.
 
 <Canvas of={ColumnsStories.Collapsing} />
 
 ## Vertical Alignment
 
-Columns with content of different heights can have different vertical alignment determinend by the `verticalAlignment` prop.
+Columns with content of different heights can have different vertical alignment set by the `verticalAlignment` prop.
 
 <Canvas of={ColumnsStories.UnequalHeights} />
 <Controls of={ColumnsStories.UnequalHeights} include="verticalAlignment" />

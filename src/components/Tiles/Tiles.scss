@@ -1,0 +1,30 @@
+@mixin calculate-flex($count, $space) {
+  $flex-basis: calc(100% / $count - $space * ($count - 1) / $count * 1px);
+  flex: 0 1 $flex-basis;
+}
+
+@mixin collapse-breakpoint($name, $breakpoint) {
+  .dc-tiles__breakpoint--#{$name} {
+    .dc-tile {
+      @media only screen and (max-width: #{$breakpoint}) {
+        flex: 0 1 100%;
+      }
+    }
+  }
+}
+
+.dc-tiles {
+  display: flex;
+  justify-content: var(--horizontal-alignment);
+  align-items: var(--vertical-alignment);
+  flex-wrap: wrap;
+  gap: calc(var(--space) * 1px);
+  .dc-tile {
+    @include calculate-flex(var(--count), var(--space));
+  }
+}
+
+@include collapse-breakpoint('sm', 544px);
+@include collapse-breakpoint('md', 768px);
+@include collapse-breakpoint('lg', 1024px);
+@include collapse-breakpoint('xlg', 1280px);

@@ -3,16 +3,17 @@ import type { Meta, StoryFn, StoryObj } from '@storybook/react';
 import Columns from './Columns';
 import Placeholder from '../Placeholder/Placeholder';
 
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta: Meta<typeof Columns> = {
-  title: 'Layout/Columns',
+  title: 'DComponents/Columns',
   component: Columns,
 };
 
 export default meta;
-type Story = StoryObj<typeof Columns>;
 
-// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
+type Story = StoryObj<typeof meta>;
+
+/* -------------------------------------------------------------------------- */
+
 const Template: StoryFn = (args) => (
   <Columns count={12} {...args}>
     <Columns.Column span={4}>
@@ -40,11 +41,11 @@ const EqualWidthsTemplate: StoryFn = (args) => (
 
 const UnequalWidthsTemplate: StoryFn = (args) => (
   <Columns count={6} {...args}>
-    <Columns.Column span={2}>
-      <Placeholder label="2" />
+    <Columns.Column span={1}>
+      <Placeholder label="1" />
     </Columns.Column>
-    <Columns.Column span={4}>
-      <Placeholder label="4" />
+    <Columns.Column span={5}>
+      <Placeholder label="5" />
     </Columns.Column>
   </Columns>
 );
@@ -62,6 +63,8 @@ const UnequalHeightsTemplate: StoryFn = (args) => (
     </Columns.Column>
   </Columns>
 );
+
+/* -------------------------------------------------------------------------- */
 
 export const Default: Story = Template.bind({});
 

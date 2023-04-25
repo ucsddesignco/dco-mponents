@@ -12,11 +12,12 @@ export interface ColumnsProps {
   space?: number;
   /** Optional custom styling */
   style?: React.CSSProperties;
+  /** Vertical alignment of columns of varying heights */
   verticalAlignment?: `top` | 'center' | 'bottom';
   children?: JSX.Element | JSX.Element[];
 }
 
-/** `Columns` and `Column` are layout components that help display elements side by side. `Columns` wrap multiple `Column` components, and all content should be placed inside the `Column` components.*/
+/** `Columns` and `Column` are layout components that display elements side by side.*/
 const Columns = ({
   children,
   collapseBreakpoint,
@@ -27,18 +28,18 @@ const Columns = ({
 }: ColumnsProps) => {
   console.log(!!collapseBreakpoint);
 
-  let alignItems;
+  let alignment;
   switch (verticalAlignment) {
     case 'top': {
-      alignItems = 'start';
+      alignment = 'start';
       break;
     }
     case 'center': {
-      alignItems = 'center';
+      alignment = 'center';
       break;
     }
     case 'bottom': {
-      alignItems = 'end';
+      alignment = 'end';
       break;
     }
   }
@@ -51,9 +52,9 @@ const Columns = ({
       )}
       style={
         {
-          '--columns': count,
-          '--space': space + 'px',
-          '--vertical-aligntment': alignItems,
+          '--count': count,
+          '--space': space,
+          '--vertical-aligntment': alignment,
           ...style,
         } as React.CSSProperties
       }

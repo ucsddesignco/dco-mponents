@@ -1,0 +1,52 @@
+import {
+  Canvas,
+  Meta,
+  Story,
+  Source,
+  Controls,
+  Primary,
+  Description,
+} from '@storybook/blocks';
+import * as TilesStories from './Tiles.stories';
+
+import Tiles from './Tiles';
+
+<Meta of={TilesStories} />
+
+# Tiles
+
+- [Overview](#overview)
+
+## Overview
+
+<Description of={Tiles} />
+
+<Canvas of={TilesStories.Default} sourceState="shown" />
+<Controls of={TilesStories.Default} sort="requiredFirst" />
+
+## Spacing
+
+Spacing between tiles is set by the `space` prop.
+
+<Canvas of={TilesStories.WithSpace} />
+<Controls of={TilesStories.WithSpace} include="space" />
+
+## Vertical Alignment
+
+Tiles with content of different heights can have different vertical alignment set by the `verticalAlignment` prop.
+
+<Canvas of={TilesStories.UnequalHeights} />
+<Controls of={TilesStories.UnequalHeights} include="verticalAlignment" />
+
+## Horizontal Justification
+
+Rows of tiles can be horizontally justified in different ways by the `horizontalJustification` prop.
+
+<Canvas of={TilesStories.Default} />
+<Controls of={TilesStories.Default} include="horizontalJustification" />
+
+## Collapsing Tiles
+
+Tiles can be made responsive and collapse into a single column when the viewport is below a certain width set by the optional prop `collapseBreakpoint`. The columns below collapse when the viewport is less than or equal to 768px.
+
+<Canvas of={TilesStories.Collapsing} />
