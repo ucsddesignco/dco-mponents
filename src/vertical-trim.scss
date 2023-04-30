@@ -1,0 +1,44 @@
+@use 'sass:math';
+
+@function _calculate-top-trim($height, $ascent, $descent, $line-height) {
+  @return math.div(($line-height - ($ascent - $descent)), 2) + $ascent - $height;
+}
+
+@function _calcualte-bottom-trim($ascent, $descent, $line-height) {
+  @return math.div(($line-height - ($ascent - $descent)), 2) - $descent;
+}
+
+@mixin trim(
+  $height,
+  $ascent,
+  $descent,
+  $upm,
+  $font-size,
+  $line-height,
+  $grid-size: 1
+) {
+  $ascent: math.div($ascent, $upm) * $font-size;
+  $height: math.div($height, $upm) * $font-size;
+  $descent: math.div($descent, $upm) * $font-size;
+  $height-rounded: ceil(math.div($height, $grid-size)) * $grid-size;
+
+  font-size: $font-size * 1px;
+  line-height: $line-height * 1px;
+
+  &::before {
+    content: '';
+    display: block;
+    margin-top: round(
+      _calculate-top-trim($height-rounded, $ascent, $descent, $line-height) *
+        -1px
+    );
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    margin-bottom: round(
+      (_calcualte-bottom-trim($ascent, $descent, $line-height)) * -1px
+    );
+  }
+}
