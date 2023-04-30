@@ -1,10 +1,10 @@
-@use '@ucsddesignco/text-trim/core.scss' as vertical;
+@use '@ucsddesignco/text-trim/core.scss' as text;
 
 #dc-docs-vertical-trim {
-  span.nb-international {
+  span.lg {
     font-family: NB International;
 
-    @include vertical.trim(
+    @include text.trim(
       $height: 1442,
       $ascent: 1638,
       $descent: -410,

@@ -1,8 +1,21 @@
+@use '@ucsddesignco/text-trim/core.scss' as text;
+
 .dc-docs-h1 {
-  padding: 16px !important;
+  padding: 24px;
   background-image: url('./header_small.gif');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right;
-  color: #00796b !important;
+
+  h1 {
+    color: #00796b;
+    @include text.trim(
+      $height: 706,
+      $ascent: 1126,
+      $descent: -249,
+      $upm: 1000,
+      $font-size: 48,
+      $line-height: 48
+    );
+  }
 }

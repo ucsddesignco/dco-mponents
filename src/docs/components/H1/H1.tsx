@@ -6,7 +6,11 @@ interface H1Props {
 }
 
 export const H1 = ({ children }: H1Props) => {
-  return <h1 className="dc-docs-h1">{children}</h1>;
+  return (
+    <div className="dc-docs-h1">
+      <h1>{children}</h1>
+    </div>
+  );
 };
 
 export default H1;

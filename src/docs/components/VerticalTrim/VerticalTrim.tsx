@@ -5,11 +5,9 @@ import Placeholder from '../../../components/Placeholder/Placeholder';
 const VerticalTrim = () => {
   return (
     <div id="dc-docs-vertical-trim">
-      <Placeholder />
-      <span className="neue-plak">VerticalTrim</span>
-      <Placeholder />
-      <span className="nb-international">VerticalTrim</span>
-      <Placeholder />
+      <Placeholder height={32} />
+      <span className="lg">VerticalTrim</span>
+      <Placeholder height={32} />
     </div>
   );
 };
