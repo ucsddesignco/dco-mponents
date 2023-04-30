@@ -1,16 +1,42 @@
 @use '@ucsddesignco/text-trim/core.scss' as text;
 
 #dc-docs-vertical-trim {
-  span.lg {
+  .title {
     font-family: NB International;
-
     @include text.trim(
       $height: 1442,
       $ascent: 1638,
       $descent: -410,
       $upm: 2048,
-      $font-size: 48,
-      $line-height: 48
+      $font-size: 64,
+      $line-height: 64
     );
+  }
+  .subtitle {
+    font-family: NB International;
+    @include text.trim(
+      $height: 1442,
+      $ascent: 1638,
+      $descent: -410,
+      $upm: 2048,
+      $font-size: 32,
+      $line-height: 40
+    );
+  }
+  .p {
+    font-family: NB International;
+    @include text.trim(
+      $height: 1442,
+      $ascent: 1638,
+      $descent: -410,
+      $upm: 2048,
+      $font-size: 16,
+      $line-height: 24
+    );
+  }
+  .flex {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
   }
 }

@@ -1,5 +1,6 @@
 import { Meta, Typeset } from '@storybook/addon-docs';
 import VerticalTrim from './components/VerticalTrim';
+import VerticalTrimComparison from './components/VerticalTrimComparison';
 
 <Meta title="Foundations/Typography" />
 
@@ -9,9 +10,9 @@ export const SampleText =
 # Typography
 
 - [Overview](#overview)
-- [Vertical Trim](#vertical-trim)
 - [Titles and Headings](#titles-and-headings)
 - [Body and Other Text](#body-and-other-text)
+- [Vertical Trim](#vertical-trim)
 
 ## Overview
 
@@ -24,7 +25,7 @@ Design Co primarily uses two fonts. Neue Plak Extended Bold is used for titles a
 **Weight:** Bold
 
 <Typeset
-  fontSizes={[32, 48, 72, 96]}
+  fontSizes={[96, 72, 48, 32]}
   fontWeight={'bold'}
   sampleText={SampleText}
   fontFamily={'Neue Plak Extended'}
@@ -32,12 +33,12 @@ Design Co primarily uses two fonts. Neue Plak Extended Bold is used for titles a
 
 ## Body and Other Text
 
-**Font:** NB International
+Font: NB International
 
-**Weight:** Regular
+Weight: Regular
 
 <Typeset
-  fontSizes={[14, 16, 20, 24]}
+  fontSizes={[24, 20, 14, 16]}
   fontWeight={'regular'}
   sampleText={SampleText}
   fontFamily={'NB International'}
@@ -45,6 +46,15 @@ Design Co primarily uses two fonts. Neue Plak Extended Bold is used for titles a
 
 ## Vertical Trim
 
-Talk about vertical trim...
+Vertical trim removes the default added space above and below text. In the example below, the text on the left has vertical trim applied while the text on the right does not.
+
+<VerticalTrimComparison />
+
+In the example below, the amount of space between each text block is exactly 32px.
 
 <VerticalTrim />
+
+### Using vertical trim
+
+- Designers: See the [designer guide](https://www.example.com)
+- Developers: See the [developer guide](https://www.example.com)

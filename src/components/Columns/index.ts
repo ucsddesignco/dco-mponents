@@ -1,1 +1,1 @@
-export { default } from './subcomponents/Column';
+export { default } from './Columns';

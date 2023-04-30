@@ -1,0 +1,20 @@
+@use '@ucsddesignco/text-trim/core.scss' as text;
+
+#dc-docs-vertical-trim-comparison {
+  .has-trim {
+    font-family: NB International;
+    @include text.trim(
+      $height: 1442,
+      $ascent: 1638,
+      $descent: -410,
+      $upm: 2048,
+      $font-size: 64,
+      $line-height: 64
+    );
+  }
+  .no-trim {
+    font-family: NB International;
+    font-size: 64px;
+    line-height: 64px;
+  }
+}
