@@ -5,7 +5,7 @@ import Placeholder from '../Placeholder/'
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta: Meta<typeof AutoTiles> = {
-	title: 'DComponents/AutoTiles',
+	title: 'DComponents/Layout/AutoTiles',
 	component: AutoTiles,
 }
 

@@ -5,7 +5,7 @@ import Placeholder from '../Placeholder/'
 
 Placeholder
 const meta: Meta<typeof Tiles> = {
-	title: 'DComponents/Tiles',
+	title: 'DComponents/Layout/Tiles',
 	component: Tiles,
 }
 

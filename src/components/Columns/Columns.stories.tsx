@@ -4,7 +4,7 @@ import Columns from './Columns'
 import Placeholder from '../Placeholder/'
 
 const meta: Meta<typeof Columns> = {
-	title: 'DComponents/Columns',
+	title: 'DComponents/Layout/Columns',
 	component: Columns,
 }
 
