@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 export interface TileProps {
-  children?: JSX.Element | JSX.Element[];
+	children?: JSX.Element | JSX.Element[]
 }
 const Tile = ({ children }: TileProps) => {
-  return <div className="dc-tile">{children}</div>;
-};
+	return <div className='dc-tile'>{children}</div>
+}
 
-export default Tile;
+export default Tile

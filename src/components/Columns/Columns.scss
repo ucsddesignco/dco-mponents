@@ -1,16 +1,16 @@
 .dc-columns {
-  display: grid;
-  grid-template-columns: repeat(var(--count), 1fr);
-  gap: calc(var(--space) * 1px);
-  align-items: var(--vertical-aligntment);
+	display: grid;
+	grid-template-columns: repeat(var(--count), 1fr);
+	gap: calc(var(--space) * 1px);
+	align-items: var(--vertical-aligntment);
 }
 
 @mixin collapse-breakpoint($name, $breakpoint) {
-  .dc-columns__breakpoint--#{$name} {
-    @media only screen and (max-width: #{$breakpoint}) {
-      grid-template-columns: 1fr;
-    }
-  }
+	.dc-columns__breakpoint--#{$name} {
+		@media only screen and (max-width: #{$breakpoint}) {
+			grid-template-columns: 1fr;
+		}
+	}
 }
 
 @include collapse-breakpoint('sm', 544px);
