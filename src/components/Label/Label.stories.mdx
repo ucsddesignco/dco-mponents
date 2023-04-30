@@ -1,12 +1,12 @@
-import { Canvas, Source, ArgsTable, Meta, Story } from '@storybook/addon-docs';
-import Label from './Label';
+import { Canvas, Source, ArgsTable, Meta, Story } from '@storybook/addon-docs'
+import Label from './Label'
 
 <Meta
-  title="DComponents/Label"
-  component={Label}
-  args={{
-    children: 'Example Text',
-  }}
+	title='DComponents/Function/Label'
+	component={Label}
+	args={{
+		children: 'Example Text',
+	}}
 />
 export const Template = (args) => <Label {...args} />;
 
@@ -14,28 +14,34 @@ export const Template = (args) => <Label {...args} />;
 
 Describe Label component...
 
-<Canvas withSource="open">
-  <Story name="Default">{Template.bind({})}</Story>
+<Canvas withSource='open'>
+	<Story name='Default'>{Template.bind({})}</Story>
 </Canvas>
-<ArgsTable story="Default" />
+<ArgsTable story='Default' />
 
 ## Usage
 
 Labels should be used in...
 
-- Situation X
-- Situation Y
-- Situaion Z
+-   Situation X
+-   Situation Y
+-   Situaion Z
 
 ## Sizes
 
 We have different sizes available...
 
 <Canvas>
-  <Story name="Medium" args={{ size: 'medium' }}>
-    {Template.bind({})}
-  </Story>
-  <Story name="Small" args={{ size: 'small' }}>
-    {Template.bind({})}
-  </Story>
+	<Story
+		name='Medium'
+		args={{ size: 'medium' }}
+	>
+		{Template.bind({})}
+	</Story>
+	<Story
+		name='Small'
+		args={{ size: 'small' }}
+	>
+		{Template.bind({})}
+	</Story>
 </Canvas>
