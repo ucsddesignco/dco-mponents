@@ -56,7 +56,11 @@ const testImages: DCoThumbnail[] = [
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
+<<<<<<< Updated upstream
 	title: 'DComponents/ThumbnailList',
+=======
+	title: 'DComponents/Function/ThumbnailList',
+>>>>>>> Stashed changes
 	component: ThumbnailList,
 	tags: ['autodocs'],
 } satisfies Meta<typeof ThumbnailList>
