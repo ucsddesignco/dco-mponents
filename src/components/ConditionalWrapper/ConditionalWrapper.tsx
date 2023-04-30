@@ -1,27 +1,27 @@
 import React from 'react'
 
 interface ConditionalWrapperGeneral {
-	/* boolean determining if wrap is active */
+	/** boolean determining if wrap is active */
 	wrap: boolean
-	/* any children of the wrapper */
+	/** any children of the wrapper */
 	children?: any
-	/* styling for the wrapper */
+	/** styling for the wrapper */
 	style?: any
-	/* other props applied to the wrapper */
+	/** other props applied to the wrapper */
 	[x: string]: any
 }
 
 interface ConditionalWrapperComponent extends ConditionalWrapperGeneral {
-	/* wrap with React Component; mutually exclusive with elementWrapper */
+	/** wrap with React Component; mutually exclusive with elementWrapper */
 	ComponentWrapper: React.ElementType
-	/* wrap with html element; mutually exclusive with ComponentWrapper */
+	/** wrap with html element; mutually exclusive with ComponentWrapper */
 	elementWrapper?: never
 }
 
 interface ConditionalWrapperElement extends ConditionalWrapperGeneral {
-	/* wrap with React Component; mutually exclusive with elementWrapper */
+	/** wrap with React Component; mutually exclusive with elementWrapper */
 	ComponentWrapper?: never
-	/* wrap with html element; mutually exclusive with ComponentWrapper */
+	/** wrap with html element; mutually exclusive with ComponentWrapper */
 	elementWrapper: string
 }
 
