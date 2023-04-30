@@ -1,14 +1,23 @@
 import React from 'react'
 
-interface ConditionalWrapperProps {
+interface ConditionalWrapperGeneral {
 	condition: boolean
-	ComponentWrapper: React.ElementType | undefined
-	elementWrapper: string | undefined
-	children: any
+	children?: any
+	style?: any
 	[x: string]: any
 }
 
-function ConditionalWrapper({ condition, ComponentWrapper, elementWrapper, children, ...rest }: ConditionalWrapperProps) {
+interface ConditionalWrapperComponent extends ConditionalWrapperGeneral {
+	ComponentWrapper: React.ElementType
+	elementWrapper?: never
+}
+
+interface ConditionalWrapperElement extends ConditionalWrapperGeneral {
+	ComponentWrapper?: never
+	elementWrapper: string
+}
+
+function ConditionalWrapper({ condition, ComponentWrapper, elementWrapper, children, ...rest }: ConditionalWrapperComponent | ConditionalWrapperElement) {
 	return condition ? (
 		ComponentWrapper ? (
 			<ComponentWrapper
@@ -16,7 +25,7 @@ function ConditionalWrapper({ condition, ComponentWrapper, elementWrapper, child
 				{...rest}
 			/>
 		) : (
-			React.createElement(elementWrapper ?? '', rest, children)
+			React.createElement(elementWrapper, rest, children)
 		)
 	) : (
 		<>{children}</>

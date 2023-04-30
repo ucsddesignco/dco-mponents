@@ -14,7 +14,6 @@ type Story = StoryObj<typeof meta>
 const Template: StoryFn = ({ condition, ComponentWrapper, elementWrapper, children, ...rest }) => (
 	<ConditionalWrapper
 		condition={condition}
-		ComponentWrapper={ComponentWrapper}
 		elementWrapper={elementWrapper}
 		children={children}
 		{...rest}
