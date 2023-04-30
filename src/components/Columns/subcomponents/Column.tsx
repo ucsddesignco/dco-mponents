@@ -1,29 +1,29 @@
-import React from 'react';
-import './Column.scss';
-import Placeholder from '../../Placeholder/Placeholder';
+import React from 'react'
+import './Column.scss'
+import Placeholder from '../../Placeholder/Placeholder'
 
 export interface ColumnProps {
-  /** Number of columns spanned */
-  span?: number;
-  /** Optional custom styling */
-  style?: React.CSSProperties;
-  children?: JSX.Element | JSX.Element[];
+	/** Number of columns spanned */
+	span?: number
+	/** Optional custom styling */
+	style?: React.CSSProperties
+	children?: JSX.Element | JSX.Element[]
 }
 
 const Column = ({ children, span = 1, style }: ColumnProps) => {
-  return (
-    <div
-      className="dc-column"
-      style={
-        {
-          '--span': span,
-          ...style,
-        } as React.CSSProperties
-      }
-    >
-      {children}
-    </div>
-  );
-};
+	return (
+		<div
+			className='dc-column'
+			style={
+				{
+					'--span': span,
+					...style,
+				} as React.CSSProperties
+			}
+		>
+			{children}
+		</div>
+	)
+}
 
-export default Column;
+export default Column
