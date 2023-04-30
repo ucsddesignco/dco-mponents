@@ -1,0 +1,49 @@
+import {
+  Canvas,
+  Meta,
+  Story,
+  Source,
+  Controls,
+  Primary,
+  Description,
+} from '@storybook/blocks';
+import * as AutoTilesStories from './AutoTiles.stories';
+
+import AutoTiles from './AutoTiles';
+
+<Meta of={AutoTilesStories} />
+
+# AutoTiles
+
+- [Overview](#overview)
+- [Minimum Width and Wrapping](#minimum-width-and-wrapping)
+- [Spacing](#spacing)
+- [Vertical Alignment](#vertical-alignment)
+
+## Overview
+
+<Description of={AutoTiles} />
+
+<Canvas of={AutoTilesStories.Default} sourceState="shown" />
+<Controls of={AutoTilesStories.Default} sort="requiredFirst" />
+
+## Minimum Width and Wrapping
+
+Minimum width is set by the `minWidth` prop. As many tiles as possible will be shrunk and fit into a row. If a tile would shrink below the minimum width, it will wrap to the next row.
+
+<Canvas of={AutoTilesStories.MinimumWidths} />
+<Controls of={AutoTilesStories.MinimumWidths} include="minWidth" />
+
+## Spacing
+
+Spacing between tiles is set by the `space` prop.
+
+<Canvas of={AutoTilesStories.WithSpace} />
+<Controls of={AutoTilesStories.WithSpace} include="space" />
+
+## Vertical Alignment
+
+Tiles with content of different heights can have different vertical alignment set by the `verticalAlignment` prop.
+
+<Canvas of={AutoTilesStories.UnequalHeights} />
+<Controls of={AutoTilesStories.UnequalHeights} include="verticalAlignment" />

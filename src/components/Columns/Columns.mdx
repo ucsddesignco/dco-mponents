@@ -1,0 +1,61 @@
+import {
+  Canvas,
+  Meta,
+  Story,
+  Source,
+  Controls,
+  Primary,
+  Description,
+} from '@storybook/blocks';
+import * as ColumnsStories from './Columns.stories';
+
+import Columns from './Columns';
+
+<Meta of={ColumnsStories} />
+
+# Columns
+
+- [Overview](#overview)
+- [Spacing](#spacing)
+- [Column Widths](#column-widths)
+- [Collapsing Columns](#collapsing-columns)
+- [Vertical Alignment](#vertical-alignment)
+
+## Overview
+
+<Description of={Columns} />
+
+<Canvas of={ColumnsStories.Default} sourceState="shown" />
+<Controls of={ColumnsStories.Default} sort="requiredFirst" />
+
+## Spacing
+
+Spacing between columns is set using the `space` prop.
+
+<Canvas of={ColumnsStories.WithSpace} />
+<Controls of={ColumnsStories.WithSpace} include="space" />
+
+## Column Widths
+
+Column widths are set manually using the `span` prop. The total `span` amount of each column can be of different values but should not exceed the `count`.
+
+### Equal Widths
+
+<Canvas of={ColumnsStories.EqualWidths} />
+
+### Unequal Widths
+
+<Canvas of={ColumnsStories.UnequalWidths} />
+
+## Collapsing Columns
+
+Columns can be made responsive and collapse into a single column when the viewport is below a certain width set by the optional prop `collapseBreakpoint`. The columns below collapse when the viewport is less than or equal to 768px.
+
+<Canvas of={ColumnsStories.Collapsing} />
+
+## Vertical Alignment
+
+Columns with content of different heights can have different vertical alignment set by the `verticalAlignment` prop.
+
+<Canvas of={ColumnsStories.UnequalHeights} />
+<Controls of={ColumnsStories.UnequalHeights} include="verticalAlignment" />
